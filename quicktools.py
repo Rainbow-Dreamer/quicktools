@@ -40,10 +40,10 @@ after you import quicktools, otherwise the variables in your file cannot
 share with this module (which means this module cannot use any of the
 variables in your file)
 
-2. def test(program, digit = 3, output = True, printed = False):
+2. test(program, digit = 3, output = True, printed = False):
 This is a test function for getting the processing time of functions or
-any executable statements. program is a string that contains the stuff
-you want to execute, digit is the number of the decimals after the time,
+any executable statements. The variable program is a string that contains
+the stuff you want to execute, digit is the number of the decimals after the time,
 and you can decide this function to print the output or not by setting
 otuput to True or False. The return of this function is formatted as
 hours, minutes, seconds, result is ... (if output is set to True)
@@ -54,7 +54,7 @@ add with multiply. You need to ensure that all of the elements inside the
 list are multipliable. This function might be very useful in mathematical
 and physical calculations, such as matrices, sequences.
 
-""
+
 
 
 '''
@@ -79,7 +79,8 @@ def rounding(num, dec=None, tostr=False):
     ind = numstr.index('.')
     if dec == 0:
         intpart = eval(numstr[:ind], LOC, GLOB)
-        return intpart + 1 if eval(numstr[ind + 1], LOC, GLOB) >= 5 else intpart
+        return intpart + 1 if eval(numstr[ind +
+                                          1], LOC, GLOB) >= 5 else intpart
     tol = len(numstr) - ind - 1
     if tol < dec:
         return f'{num:.{dec}f}' if tostr else num
@@ -167,7 +168,7 @@ def sortwithind(a, rev=False):
     return result
 
 
-def sway(obj, func, dr=0):
+def composition(obj, func, dr=0):
     if dr == 0:
         temp = obj[0]
         for k in obj[1:]:
@@ -1057,7 +1058,8 @@ class Translator:
                             [i for i in val1 if i.isdigit() or i.isalpha()])
                         val2 = ''.join(
                             [i for i in val2 if i.isdigit() or i.isalpha()])
-                        result = eachope.func(eval(val1, LOC, GLOB), eval(val2, LOC, GLOB))
+                        result = eachope.func(eval(val1, LOC, GLOB),
+                                              eval(val2, LOC, GLOB))
                     elif eachope.place == SUF:
                         val = unformatedline[:ind]
                         val = ''.join(
