@@ -4,7 +4,7 @@ from os import path
 setup(
     name='quicktools',
     packages = ['quicktools'],
-    version='0.14',
+    version='0.15',
     license='AGPLv3',
     description=
     'This is a python functions tools module for enhancing python grammar structures and functions',
@@ -12,7 +12,7 @@ setup(
     author_email='1036889495@qq.com',
     url='https://github.com/Rainbow-Dreamer/quicktools',
     download_url=
-    'https://github.com/Rainbow-Dreamer/quicktools/archive/0.14.tar.gz',
+    'https://github.com/Rainbow-Dreamer/quicktools/archive/0.15.tar.gz',
     keywords=['tools', 'mathematics', 'statistics'],
     classifiers=[
         'Development Status :: 3 - Alpha',
